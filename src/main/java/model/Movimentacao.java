@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,6 +23,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Movimentacao {
 	
 	
@@ -33,7 +36,7 @@ public class Movimentacao {
 		private long idUsuario;
 		
 	}
-	
+	@Id
 	@EmbeddedId
 	private MovimentacaoId id;
 	private LocalDateTime dataEntrada;

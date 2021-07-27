@@ -1,5 +1,7 @@
 package model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -16,8 +18,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class localidade {
 	
+	@Id
 	private long id;
 	@ManyToOne
 	private NivelAcesso nivelAcesso;
