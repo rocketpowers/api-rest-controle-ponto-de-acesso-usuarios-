@@ -4,11 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -42,7 +38,9 @@ public class Movimentacao {
 	private LocalDateTime dataEntrada;
 	private LocalDateTime dataSaida;
 	private BigDecimal periodo;
+	@ManyToOne
 	private Ocorrencia ocorrencia;
+	@ManyToOne
 	private Calendario calendario;
 
 }
