@@ -1,5 +1,7 @@
 package com.rockets.demo.SwaggerConfig;
 
+
+import java.util.Collections;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -27,6 +29,7 @@ public class SwaggerConfig {
                 .build()
                 .apiInfo(apiInfo())
                 .globalOperationParameters(
+
                         Collections.singletonList(
                                 new ParameterBuilder()
                                         .name("Authorization")

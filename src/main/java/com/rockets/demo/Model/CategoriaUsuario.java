@@ -1,14 +1,11 @@
 package com.rockets.demo.Model;
 
+import lombok.*;
+import org.hibernate.envers.Audited;
+
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Getter
 @Setter
@@ -17,6 +14,7 @@ import lombok.Setter;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class CategoriaUsuario {
 	
 	@Id

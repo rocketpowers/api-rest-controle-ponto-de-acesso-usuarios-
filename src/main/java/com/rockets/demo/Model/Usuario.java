@@ -1,18 +1,12 @@
 package com.rockets.demo.Model;
 
+import lombok.*;
+import javax.persistence.Entity;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import org.hibernate.envers.Audited;
 
 
 @Getter
@@ -22,6 +16,7 @@ import lombok.Setter;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class Usuario {
 	@Id
 	private Long id;
